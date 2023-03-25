@@ -1,0 +1,184 @@
+<!-- <div class="card">
+    <table>
+
+        <tr>
+            <td>Nombre(s): </td>
+            <td><input type="text" [(ngModel)]="paciente.nombre"></td>
+        </tr>
+        <tr>
+            <td>Apellidos: </td>
+            <td><input type="text" [(ngModel)]="paciente.apellido"></td>
+        </tr>
+        <tr>
+            <td>Lugar de Nacimiento: </td>
+            <td><input type="text" [(ngModel)]="paciente.lugarNacimiento"></td>
+        </tr>
+        <tr>
+            <td>Fecha de Nacimiento: </td>
+            <td><input type="date" [(ngModel)]="paciente.fechaNacimiento"></td>
+        </tr>
+        <tr>
+            <td>Domicilio: </td>
+            <td><input type="text" [(ngModel)]="paciente.domicilio"></td>
+        </tr>
+        <tr>
+            <td>Ocupación:</td>
+            <td><input type="text" [(ngModel)]="paciente.ocupacion" name="ocupacion"></td>
+        </tr>
+        <tr>
+            <td>Estado Civil:</td>
+            <td>
+                <select [(ngModel)]="paciente.estadoCivil" name="estadoCivil">
+                    <option value="soltero">Soltero</option>
+                    <option value="casado">Casado</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="viudo">Viudo</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Sexo:</td>
+            <td>
+                <input type="radio" [(ngModel)]="paciente.sexo" name="sexo" value="masculino"> Masculino
+                <input type="radio" [(ngModel)]="paciente.sexo" name="sexo" value="femenino"> Femenino
+                <input type="radio" [(ngModel)]="paciente.sexo" name="sexo" value="no binario"> No binario
+            </td>
+        </tr>
+        <tr>
+            <td>Edad:</td>
+            <td><input type="text" [(ngModel)]="paciente.edad" name="edad"></td>
+        </tr>
+        <tr>
+            <td>Celular:</td>
+            <td><input type="text" [(ngModel)]="paciente.celular" name="celular"></td>
+        </tr>
+        <tr>
+            <td>Teléfono de Casa (opcional):</td>
+            <td><input type="text" [(ngModel)]="paciente.telCasa" name="telCasa"></td>
+        </tr>
+        <tr>
+            <td>Tipo de Sangre:</td>
+            <td><input type="text" [(ngModel)]="paciente.tipoSangre" name="tipoSangre"></td>
+        </tr>
+        <tr>
+            <td>Como se Enteró:</td>
+            <td><input type="text" [(ngModel)]="paciente.comoSeEntero" name="comoSeEntero"></td>
+        </tr>
+        <td colspan="2">
+            <input type="button" pButton label="Primary" value="GUARDAR" (click)="guardarPaci()">
+        </td>
+    </table>
+</div> -->
+<section class="flex flex-row h-screen items-center">
+    <div class="h-screen hidden bg-blue-600 lg:block ">
+        <img src="assets/adjuntos/pedeatria.jpeg" class="w-full h-full object-cover" alt="">
+    </div>
+    <div class="  mx-auto  ">
+      <div class="w-full h-100">
+        <!-- <h1 class="text-3xl md:text-2x2 font-bold leading-tight mt-10 justify-center">REGISTRO</h1> -->
+        <div class="mt-6 w-full">
+          <div class="flex flex-col md:flex-row md:space-x-4">
+            <div class="flex-grow">
+              <label class="label_login" for="">Nombre:</label>
+              <input [(ngModel)]="paciente.nombre" pInputText [style]="{'width':'100%'}" class=" mb-3" autocomplete autofocus required type="text" name="nombre" id="nombre" placeholder="Nombre">
+            </div>
+            <div class="flex-grow">
+              <label class="label_login" for="">Apellido:</label>
+              <input [(ngModel)]="paciente.apellido" pInputText [style]="{'width':'100%'}" class=" mb-3" autocomplete autofocus required type="text" name="apellido" id="apellido" placeholder="Apellido">
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row md:space-x-4">
+            <div class="flex-grow">
+              <label class="label_login" for="">Lugar de Nacimiento:</label>
+              <input [(ngModel)]="paciente.lugarNacimiento" pInputText [style]="{'width':'100%'}" class=" mb-3" autocomplete autofocus required type="text" name="lugarNacimiento" id="lugarNacimiento" placeholder="Lugar de Nacimiento">
+            </div>
+            <div class="flex-grow">
+              <label class="label_login" for="">Fecha de Nacimiento:</label>
+              <input [(ngModel)]="paciente.fechaNacimiento" pInputText [style]="{'width':'100%'}" class=" mb-3" autocomplete autofocus required type="text" name="fechaNacimiento" id="fechaNacimiento" placeholder="Fecha de Nacimiento">
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row md:space-x-4">
+            <div class="flex-grow">
+              <label class="label_login" for="">Domicilio:</label>
+              <input [(ngModel)]="paciente.domicilio" pInputText [style]="{'width':'100%'}" class=" mb-3" autocomplete autofocus required type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+            </div>
+            <div class="flex-grow">
+              <label class="label_login" for="">Ocupación:</label>
+              <input [(ngModel)]="paciente.ocupacion" pInputText [style]="{'width':'100%'}" class=" mb-3" autocomplete autofocus required type="text" name="ocupacion" id="ocupacion" placeholder="Ocupación">
+            </div>
+          </div> 
+
+          <div class="flex flex-col md:flex-row md:space-x-4">
+            <div class="flex-grow">
+              <label class="label_login" for="">Estado civil:</label>
+              <select [(ngModel)]="paciente.estadoCivil" name="estadoCivil" class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                <option value="">Seleccionar</option>
+                <option value="soltero">Soltero</option>
+                <option value="casado">Casado</option>
+                <option value="divorciado">Divorciado</option>
+                <option value="viudo">Viudo</option>
+            </select>
+            </div>
+            <div class="flex-grow">
+              <label class="label_login" for="">Sexo:</label>
+              <select [(ngModel)]="paciente.sexo" name="sexo" class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                <option value="">Seleccionar</option>
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+                <option value="No binario">No binario</option>
+              </select>
+            </div>
+          </div>
+        </div><br>
+
+        <div class="flex flex-col md:flex-row md:space-x-4">
+          <div class="flex-grow">
+            <label class="label_login" for="">Edad:</label>
+            <input [(ngModel)]="paciente.edad" pInputText [style]="{'width':'100%'}" class=" mb-3" autocomplete autofocus required type="number" name="edad" id="edad" placeholder="Edad">
+          </div>
+          <div class="flex-grow">
+            <label class="label_login" for="">Celular:</label>
+            <input [(ngModel)]="paciente.celular" pInputText [style]="{'width':'100%'}" class=" mb-3" autocomplete autofocus required type="number" name="celular" id="celular" placeholder="Celular">
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row md:space-x-4">
+          <div class="flex-grow">
+            <label class="label_login" for="">Telefono de Casa:</label>
+            <input [(ngModel)]="paciente.telCasa" pInputText [style]="{'width':'100%'}" class=" mb-3" autocomplete autofocus required type="number" name="telCasa" id="telCasa" placeholder="Telefono de Casa">
+          </div>
+          <div class="flex-grow">
+            <label class="label_login" for="">Tipo de Sangre:</label>
+            <select [(ngModel)]="paciente.tipoSangre" name="tipoSangre" class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+              <option value="">Seleccionar</option>
+              <option value="O+">O+</option>
+              <option value="AB+">AB+</option>
+              <option value="A+">A+</option>
+              <option value="B-">B-</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row md:space-x-4">
+          <div class="flex-grow">
+            <label class="label_login" for="">Como se Enteró:</label>
+            <input [(ngModel)]="paciente.comoSeEntero" pInputText [style]="{'width':'100%'}" class=" mb-3" autocomplete autofocus required type="text" name="comoSeEntero" id="comoSeEntero" placeholder="Nombre">
+          </div>
+        </div>
+        <!-- boton -->
+        <input class="btn_login" type="button" (click)="guardarPaci()" value="Confirmar">        <hr class="linea_abajo">
+        <p class="flex justify-center">
+          <a routerLink="/inicio" class="text-teal-600 font-semibold">
+            Regresar al Inicio
+          </a>
+        </p>
+        <p class="text-sm text-gray-500 justify-center flex mt-7 ">
+          &copy; 2023 Encrypted Minds
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  

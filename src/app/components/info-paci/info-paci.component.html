@@ -1,0 +1,178 @@
+<div class="card">
+    <table>
+
+        <tr>
+            <td>Nombre: </td>
+            <td><input type="text" [(ngModel)]="paciente.nombre"></td>
+        </tr>
+        <tr>
+            <td>Apellido: </td>
+            <td><input type="text" [(ngModel)]="paciente.apellido"></td>
+        </tr>
+        <tr>
+            <td>Lugar de Nacimiento: </td>
+            <td><input type="text" [(ngModel)]="paciente.lugarNacimiento"></td>
+        </tr>
+        <tr>
+            <td>Fecha de Nacimiento: </td>
+            <td><input type="date" [(ngModel)]="paciente.fechaNacimiento"></td>
+        </tr>
+        <tr>
+            <td>Domicilio: </td>
+            <td><input type="text" [(ngModel)]="paciente.domicilio"></td>
+        </tr>
+        <tr>
+            <td>Ocupación:</td>
+            <td><input type="text" [(ngModel)]="paciente.ocupacion" name="ocupacion"></td>
+        </tr>
+        <tr>
+            <td>Estado Civil:</td>
+            <td>
+                <select [(ngModel)]="paciente.estadoCivil" name="estadoCivil">
+                    <option value="soltero">Soltero</option>
+                    <option value="casado">Casado</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="viudo">Viudo</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Sexo:</td>
+            <td>
+                <input type="radio" [(ngModel)]="paciente.sexo" name="sexo" value="masculino"> Masculino
+                <input type="radio" [(ngModel)]="paciente.sexo" name="sexo" value="femenino"> Femenino
+            </td>
+        </tr>
+        <tr>
+            <td>Edad:</td>
+            <td><input type="text" [(ngModel)]="paciente.edad" name="edad"></td>
+        </tr>
+        <tr>
+            <td>Celular:</td>
+            <td><input type="text" [(ngModel)]="paciente.celular" name="celular"></td>
+        </tr>
+        <tr>
+            <td>Teléfono de Casa:</td>
+            <td><input type="text" [(ngModel)]="paciente.telCasa" name="telCasa"></td>
+        </tr>
+        <tr>
+            <td>Tipo de Sangre:</td>
+            <td><input type="text" [(ngModel)]="paciente.tipoSangre" name="tipoSangre"></td>
+        </tr>
+        <tr>
+            <td>Como se Enteró:</td>
+            <td><input type="text" [(ngModel)]="paciente.comoSeEntero" name="comoSeEntero"></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" [(ngModel)]="paciente.email" name="email"></td>
+        </tr>
+    
+        <tr>
+            <td>Tratamiento médico actual:</td>
+            <td><input type="text" [(ngModel)]="paciente.tratamientoMedicoActual" name="tratamientoMedicoActual"></td>
+        </tr>
+        <tr>
+            <td>Toma medicamentos:</td>
+            <td><input type="text" [(ngModel)]="paciente.tomaMedicamentos" name="tomaMedicamentos"></td>
+        </tr>
+        <tr>
+            <td>Alergias:</td>
+            <td><input type="text" [(ngModel)]="paciente.alergias" name="alergias"></td>
+        </tr>
+        <tr>
+            <td>Cardiopatías:</td>
+            <td><input type="text" [(ngModel)]="paciente.cardiopatias" name="cardiopatias"></td>
+        </tr>
+        <tr>
+            <td>Alteración de presión arterial:</td>
+            <td><input type="text" [(ngModel)]="paciente.alteracionPresionArterial" name="alteracionPresionArterial"></td>
+        </tr>
+        <tr>
+            <td>Embarazos:</td>
+            <td><input type="text" [(ngModel)]="paciente.embarazos" name="embarazos"></td>
+        </tr>
+        <tr>
+            <td>Diabetes:</td>
+            <td><input type="text" [(ngModel)]="paciente.diabetes" name="diabetes"></td>
+        </tr>
+        <tr>
+            <td>Hepatitis:</td>
+            <td><input type="text" [(ngModel)]="paciente.hepatitis" name="hepatitis"></td>
+        </tr>
+        <tr>
+            <td>Problemas sanguíneos:</td>
+            <td><input type="text" [(ngModel)]="paciente.problemasSanguineos" name="problemasSanguineos"></td>
+        </tr>
+        <tr>
+            <td>Cáncer:</td>
+            <td><input type="text" [(ngModel)]="paciente.cancer" name="cancer"></td>
+        </tr>
+        <tr>
+            <td>Fiebre reumática:</td>
+            <td><input type="text" [(ngModel)]="paciente.fiebreReumatica" name="fiebreReumatica"></td>
+        </tr>
+        <tr>
+            <td>Enfermedades orales:</td>
+            <td><input type="text" [(ngModel)]="paciente.enfermedadesOrales" name="enfermedadesOrales"></td>
+        </tr>
+        <tr>
+            <td>Inmunosupresión:</td>
+            <td><input type="text" [(ngModel)]="paciente.inmunosupresion" name="inmunosupresion"></td>
+        </tr>
+        <tr>
+            <td>Trastornos emocionales:</td>
+            <td><input type="text" [(ngModel)]="paciente.transtornosEmocionales" name="transtornosEmocionales"></td>
+        </tr>
+        <tr>
+            <td>Enfermedades respiratorias:</td>
+            <td><input type="text" [(ngModel)]="paciente.enfermedadesRespiratorias" name="enfermedadesRespiratorias"></td>
+        </tr>
+        <tr>
+            <td>Trastornos gástricos:</td>
+            <td><input type="text" [(ngModel)]="paciente.transtornosGastricos" name="transtornosGastricos"></td>
+        </tr>
+        <tr>
+            <td>Epilepsia:</td>
+            <td><input type="text" [(ngModel)]="paciente.epilepsia" name="epilepsia"></td>
+        </tr>
+        <tr>
+            <td>Cirugías:</td>
+            <td><input type="text" [(ngModel)]="paciente.cirujias" name="cirujias"></td>
+        </tr>
+        <tr>
+            <td>VIH:</td>
+            <td><input type="text" [(ngModel)]="paciente.VIH" name="VIH"></td>
+        </tr>
+        <tr>
+            <td>Otras alteraciones:</td>
+            <td><input type="text" [(ngModel)]="paciente.otrasAlteraciones" name="otrasAlteraciones"></td>
+        </tr>
+        <tr>
+            <td>Observaciones antecedentes:</td>
+            <td><input type="text" [(ngModel)]="paciente.observacionesAntecedentes" name="observacionesAntecedentes"></td>
+        </tr>
+        <tr>
+            <td>Antecedentes familiares:</td>
+            <td><input type="text" [(ngModel)]="paciente.antecedentesFamiliares" name="antecedentesFamiliares"></td>
+        </tr>
+        <tr>
+            <td>Fecha de cita:</td>
+            <td><input type="text" [(ngModel)]="paciente.fecha_cita" name="fecha_cita"></td>
+        </tr>
+        <tr>
+            <td>Correo dentista:</td>
+            <td><input type="text" [(ngModel)]="paciente.correoDentista" name="correoDentista"></td>
+        </tr>
+        <tr>
+            <td>Tipo de cita:</td>
+            <td><input type="text" [(ngModel)]="paciente.tipoCita" name="tipoCita"></td>
+        </tr>
+        <tr>
+            <td>Descripción:</td>
+            <td><input type="text" [(ngModel)]="paciente.descripcion" name="descripcion"></td>
+        </tr>
+        <tr>
+            <td>Estatus de cita:</td>
+            <td><input type="text" [(ngModel)]="paciente.estatusCita" name="estatusCita"></td>
+        </tr>

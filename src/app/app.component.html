@@ -1,0 +1,14 @@
+
+<app-sidenav *ngIf="servicioLogin.esEmpleado() && servicioLogin.suNivel() == '2'" (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+<app-header *ngIf="servicioLogin.eslogueado() && servicioLogin.suNivel()== '2'"
+    [collapsed]="isSideNavCollapsed"
+    [screenWidth]="screenWidth">
+</app-header>
+<app-body *ngIf="servicioLogin.eslogueado() && servicioLogin.suNivel()== '2'"
+    [collapsed]="isSideNavCollapsed"
+    [screenWidth]="screenWidth"
+></app-body>
+
+<router-outlet></router-outlet>
+
+

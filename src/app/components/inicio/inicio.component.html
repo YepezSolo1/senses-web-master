@@ -1,0 +1,248 @@
+<!-- <p>menu works!</p> -->
+
+<!-- <ul>
+    <li><a href="" routerLink="inicio" >Inicio</a></li>
+    <li><a href="" routerLink="contacto">Contacto</a> </li>
+    <li><a href="" routerLink="directivas">Directivas</a></li>
+    <li><a href="" routerLink="login">Inicio Sesion</a></li>
+    <li><a href="" routerLink="cliente">cliente</a></li>
+    <li><a href="" routerLink="empleado">empleado</a></li>
+    <li><a href="" routerLink="producto">producto</a></li>
+</ul> -->
+
+<!-- <button mat-button  routerLink="inicio">Inicio</button>
+
+
+<button mat-button routerLink="contacto">Contacto</button>
+
+
+<button mat-button [matMenuTriggerFor]="beforeMenu">Directivas</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item routerLink="directivas">Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
+
+<button *ngIf="ServicioLoginService.esEmpleado() && ServicioLoginService.suNivel()=='Gerente'" mat-button  routerLink="empleado">Empleado</button>
+<button *ngIf="ServicioLoginService.esEmpleado()" mat-button  routerLink="cliente">Cliente</button>
+<button *ngIf="ServicioLoginService.esEmpleado()" mat-button  routerLink="producto">Productos</button>
+<button *ngIf="ServicioLoginService.esEmpleado()" mat-button  routerLink="sensor">Sensor</button>
+<button *ngIf="ServicioLoginService.esEmpleado()" mat-button  routerLink="venta">Venta</button>
+
+<button mat-button *ngIf="ServicioLoginService.eslogueado(), else otro" (click)="ServicioLoginService.logout()" routerLink="inicio">Cerrar sesión</button>
+
+<ng-template #otro>
+    <button mat-button  routerLink="login">Inicio de sesion</button>
+</ng-template> -->
+
+
+<header>
+    <div class="container" [ngClass]="{'open': isMenuOpen}">
+        <nav class="nav">
+            <div class="menu-toggle" (click)="toggleMenu()">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </div>
+            <a *ngIf="servicioLogin.eslogueado()" routerLink="/perfil" class="logo">{{paciente.nombre}}</a>
+            <a *ngIf="!servicioLogin.eslogueado()" routerLink="/inicio" class="logo">Senses</a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="/inicio" class="nav-link active">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link ">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link ">Reservaciones</a>
+                </li>
+                <li *ngIf="servicioLogin.eslogueado()" class="nav-item">
+                    <a  href="#" class="nav-link " routerLink="/miscita">Mis Citas</a>
+                </li>
+                <li *ngIf="servicioLogin.eslogueado()" class="nav-item">
+                    <a  href="#" class="nav-link " routerLink="/cita">Citas</a>
+                </li>
+                <li *ngIf="!servicioLogin.eslogueado()" class="nav-item">
+                    <a href="#" class="nav-link " routerLink="/login">Login</a>
+                </li>
+                <li *ngIf="servicioLogin.eslogueado()" class="nav-item">
+                    <a (click)="servicioLogin.logout()" href="#" class="nav-link ">Log out</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<section class="hero" id="hero">
+    <div class="container">
+        <!-- <h2 class="h2-sub">
+            <span class="fil">B</span>ienvenido
+        </h2> -->
+        <h1 class="head">SENSES</h1>
+        <div class="he-des">
+            <h5>CLINICA DENTAL</h5>
+            <a *ngIf="!servicioLogin.eslogueado()" href="#" routerLink="/registrousu" class="btn cta-btn">Registrate</a>
+            <a *ngIf="servicioLogin.eslogueado()" href="#" routerLink="/cita" class="btn cta-btn">Agendar Cita</a>
+        </div>
+    </div>
+</section>
+
+<section class="dis-sto">
+    <div class="container">
+        <div class="res-info">
+            <div>
+                <img src="assets/adjuntos/IMG-20221015-WA0032.jpg" alt="">
+            </div>
+        
+            <div class="res-des pad-rig">
+                <div class="global">
+                    <h2 class="h2-sub">
+                        CLINICA DENTAL
+                    </h2>
+                    <h1 class="head hea-dark">SENSES</h1>
+                    <div class="circle">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                </div>
+                <p>
+                    En Clínica Dental SENSES ofrecemos odontología para toda la familia, comprometidos en brindar una experiencia sencilla y confortable para nuestros pacientes. Contamos con especialistas en todas las áreas, equipo y tecnología de primer nivel. Nuestras instalaciones están diseñadas para crear un ambiente ideal, cómodo y relajante.
+                </p>
+                <a href="#" class="btn cta-btn">Nosotros</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="taste bt">
+    <div class="container">
+        <div class="global">
+            <h2 class="h2-sub">
+                SERVICIOS
+            </h2>
+            <h1 class="head">Dentales</h1>
+        </div>
+    </div>
+</section>
+
+
+<section class="disco">
+    <div class="container">
+        <div class="res-info">
+            <div class="res-des">
+                <div class="global">
+                    <h1 class="head hea-dark">Tratamientos</h1>
+                    <div class="circle">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                </div>
+                <p>
+                    Como profesionales de la salud sabemos la importancia de brindar una excelente
+                    atención a cada uno de nuestros pacientes, estamos comprometidos en brindarles atención 
+                    especializada en cada área de la odontología y así lograr que nuestros pacientes se sientan 
+                    en la tranquilidad de estar en las mejores manos.
+                </p>
+                <a href="#" class="btn cta-btn">Más información</a>
+            </div>
+            <div class="image-group pad-rig">
+                <img src="assets/adjuntos/endodoncia.jpeg" alt="">
+                <img src="assets/adjuntos/maxi.jpeg" alt="">
+                <img src="assets/adjuntos/ortodoncia.jpeg" alt="">
+                <img src="assets/adjuntos/periodoncia.jpeg" alt="">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="pb bt">
+    <div class="container">
+        <div class="global">
+            <h1 class="head">Información de la Clinica</h1>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="res-info">
+
+            <div class="image-group">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1629.1936984927208!2d-103.37923865312571!3d20.675150638652116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428afd7f0415731%3A0xc198f355a4fe2de7!2sCL%C3%8DNICA%20DENTAL%20SENSES!5e0!3m2!1ses-419!2smx!4v1679665328484!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="res-des pad-rig">
+                <div class="global">
+                    <h1 class="head hea-dark">Encuentranos</h1>
+                    <div class="circle">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                </div>
+                <p>
+                    Av. José María Morelos 2147, Arcos Vallarta, 44130 Guadalajara, Jal.
+                </p>
+                <a href="https://www.google.com.mx/maps/place/CL%C3%8DNICA+DENTAL+SENSES/@20.6759355,-103.3812671,17.16z/data=!4m16!1m9!3m8!1s0x8428afd7f0415731:0xc198f355a4fe2de7!2sCL%C3%8DNICA+DENTAL+SENSES!8m2!3d20.6753543!4d-103.3797587!9m1!1b1!16s%2Fg%2F11f79d0zls!3m5!1s0x8428afd7f0415731:0xc198f355a4fe2de7!8m2!3d20.6753543!4d-103.3797587!16s%2Fg%2F11f79d0zls" class="btn cta-btn">Más información</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+
+            <div class="footer-content-about">
+                <h4>¿Quiénes somos?</h4>
+                <div class="circle">
+                    <i class="fas fa-circle"></i>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Praesentium odio labore dolorum veritatis, culpa cumque eum 
+                    reprehenderit iure, commodi, repellat eaque possimus obcaecati 
+                    assumenda exercitationem? 
+                    Aperiam provident accusantium laboriosam. Necessitatibus!</p>
+            </div>
+            <div class="footer-div">
+                <div class="social-media">
+                    <h4>Siguenos</h4>
+                    <ul class="social-icons">
+                        
+                        <li>
+                            <a href="https://www.facebook.com/sensesclinicadental"><i class="fab fa-facebook-square"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/sensesclinicadental/"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com.mx/maps/place/CL%C3%8DNICA+DENTAL+SENSES/@20.6759355,-103.3812671,17.16z/data=!4m16!1m9!3m8!1s0x8428afd7f0415731:0xc198f355a4fe2de7!2sCL%C3%8DNICA+DENTAL+SENSES!8m2!3d20.6753543!4d-103.3797587!9m1!1b1!16s%2Fg%2F11f79d0zls!3m5!1s0x8428afd7f0415731:0xc198f355a4fe2de7!8m2!3d20.6753543!4d-103.3797587!16s%2Fg%2F11f79d0zls"><i class="fab fa-google"></i></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <h4>Comunicate con Nosotros</h4>
+                    <p>+523323002209</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!-- <script>
+
+    const selectElement = function(element) {
+        return document.querySelector(element);
+    }
+
+
+    let menuToggle = selectElement('.menu-toggle');
+    let body = selectElement('body');
+
+    menuToggle.addEventListener('click', function(){
+        body.classList.toggle('open');
+    })
+
+</script> -->

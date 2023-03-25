@@ -1,0 +1,282 @@
+<!-- <div class="card">
+    <table>
+
+        <tr>
+            <td>Nombre(s): </td>
+            <td><input type="text" [(ngModel)]="paciente.nombre"></td>
+        </tr>
+        <tr>
+            <td>Apellidos: </td>
+            <td><input type="text" [(ngModel)]="paciente.apellido"></td>
+        </tr>
+        <tr>
+            <td>Lugar de Nacimiento: </td>
+            <td><input type="text" [(ngModel)]="paciente.lugarNacimiento"></td>
+        </tr>
+        <tr>
+            <td>Fecha de Nacimiento: </td>
+            <td><input type="date" [(ngModel)]="paciente.fechaNacimiento"></td>
+        </tr>
+        <tr>
+            <td>Domicilio: </td>
+            <td><input type="text" [(ngModel)]="paciente.domicilio"></td>
+        </tr>
+        <tr>
+            <td>Ocupación:</td>
+            <td><input type="text" [(ngModel)]="paciente.ocupacion" name="ocupacion"></td>
+        </tr>
+        <tr>
+            <td>Estado Civil:</td>
+            <td>
+                <select [(ngModel)]="paciente.estadoCivil" name="estadoCivil">
+                    <option value="soltero">Soltero</option>
+                    <option value="casado">Casado</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="viudo">Viudo</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Sexo:</td>
+            <td>
+                <input type="radio" [(ngModel)]="paciente.sexo" name="sexo" value="masculino"> Masculino
+                <input type="radio" [(ngModel)]="paciente.sexo" name="sexo" value="femenino"> Femenino
+                <input type="radio" [(ngModel)]="paciente.sexo" name="sexo" value="no binario"> No binario
+            </td>
+        </tr>
+        <tr>
+            <td>Edad:</td>
+            <td><input type="text" [(ngModel)]="paciente.edad" name="edad"></td>
+        </tr>
+        <tr>
+            <td>Celular:</td>
+            <td><input type="text" [(ngModel)]="paciente.celular" name="celular"></td>
+        </tr>
+        <tr>
+            <td>Teléfono de Casa (opcional):</td>
+            <td><input type="text" [(ngModel)]="paciente.telCasa" name="telCasa"></td>
+        </tr>
+        <tr>
+            <td>Tipo de Sangre:</td>
+            <td><input type="text" [(ngModel)]="paciente.tipoSangre" name="tipoSangre"></td>
+        </tr>
+        <tr>
+            <td>Como se Enteró:</td>
+            <td><input type="text" [(ngModel)]="paciente.comoSeEntero" name="comoSeEntero"></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" [(ngModel)]="paciente.email" name="email"></td>
+        </tr>
+        <tr>
+            <td>Tratamiento médico actual:</td>
+            <td><input type="text" [(ngModel)]="paciente.tratamientoMedicoActual" name="tratamientoMedicoActual"></td>
+        </tr>
+        <tr>
+            <td>Toma medicamentos:</td>
+            <td><input type="text" [(ngModel)]="paciente.tomaMedicamentos" name="tomaMedicamentos"></td>
+        </tr>
+        <tr>
+            <td>Alergias:</td>
+            <td><input type="text" [(ngModel)]="paciente.alergias" name="alergias"></td>
+        </tr>
+        <tr>
+            <td>Cardiopatías:</td>
+            <td><input type="text" [(ngModel)]="paciente.cardiopatias" name="cardiopatias"></td>
+        </tr>
+        <tr>
+            <td>Alteración de presión arterial:</td>
+            <td><input type="text" [(ngModel)]="paciente.alteracionPresionArterial" name="alteracionPresionArterial"></td>
+        </tr>
+        <tr>
+            <td>Embarazos:</td>
+            <td><input type="text" [(ngModel)]="paciente.embarazos" name="embarazos"></td>
+        </tr>
+        <tr>
+            <td>Diabetes:</td>
+            <td><input type="text" [(ngModel)]="paciente.diabetes" name="diabetes"></td>
+        </tr>
+        <tr>
+            <td>Hepatitis:</td>
+            <td><input type="text" [(ngModel)]="paciente.hepatitis" name="hepatitis"></td>
+        </tr>
+        <tr>
+            <td>Problemas sanguíneos:</td>
+            <td><input type="text" [(ngModel)]="paciente.problemasSanguineos" name="problemasSanguineos"></td>
+        </tr>
+        <tr>
+            <td>Cáncer:</td>
+            <td><input type="text" [(ngModel)]="paciente.cancer" name="cancer"></td>
+        </tr>
+        <tr>
+            <td>Fiebre reumática:</td>
+            <td><input type="text" [(ngModel)]="paciente.fiebreReumatica" name="fiebreReumatica"></td>
+        </tr>
+        <tr>
+            <td>Enfermedades orales:</td>
+            <td><input type="text" [(ngModel)]="paciente.enfermedadesOrales" name="enfermedadesOrales"></td>
+        </tr>
+        <tr>
+            <td>Inmunosupresión:</td>
+            <td><input type="text" [(ngModel)]="paciente.inmunosupresion" name="inmunosupresion"></td>
+        </tr>
+        <tr>
+            <td>Trastornos emocionales:</td>
+            <td><input type="text" [(ngModel)]="paciente.transtornosEmocionales" name="transtornosEmocionales"></td>
+        </tr>
+        <tr>
+            <td>Enfermedades respiratorias:</td>
+            <td><input type="text" [(ngModel)]="paciente.enfermedadesRespiratorias" name="enfermedadesRespiratorias"></td>
+        </tr>
+        <tr>
+            <td>Trastornos gástricos:</td>
+            <td><input type="text" [(ngModel)]="paciente.transtornosGastricos" name="transtornosGastricos"></td>
+        </tr>
+        <tr>
+            <td>Epilepsia:</td>
+            <td><input type="text" [(ngModel)]="paciente.epilepsia" name="epilepsia"></td>
+        </tr>
+        <tr>
+            <td>Cirugías:</td>
+            <td><input type="text" [(ngModel)]="paciente.cirujias" name="cirujias"></td>
+        </tr>
+        <tr>
+            <td>VIH:</td>
+            <td><input type="text" [(ngModel)]="paciente.VIH" name="VIH"></td>
+        </tr>
+        <tr>
+            <td>Otras alteraciones:</td>
+            <td><input type="text" [(ngModel)]="paciente.otrasAlteraciones" name="otrasAlteraciones"></td>
+        </tr>
+        <tr>
+            <td>Observaciones antecedentes:</td>
+            <td><input type="text" [(ngModel)]="paciente.observacionesAntecedentes" name="observacionesAntecedentes"></td>
+        </tr>
+        <tr>
+            <td>Antecedentes familiares:</td>
+            <td><input type="text" [(ngModel)]="paciente.antecedentesFamiliares" name="antecedentesFamiliares"></td>
+        </tr>
+
+        
+
+    </table>
+    <input type="button" value="Actualizar" (click)="modificarPaci()">
+</div> -->
+<!-- component -->
+<div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
+    <div class="container max-w-screen-lg mx-auto">
+      <div>
+  
+        <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+          <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+            <div class="text-gray-600">
+              <p class="font-medium text-lg">{{paciente.nombre + " " + paciente.apellido}}</p>
+              <p>{{paciente.email}}</p>
+            </div>
+  
+            <div class="lg:col-span-2">
+              <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                <div class="md:col-span-3">
+                  <label for="nombre">Nombre: </label>
+                  <input type="text" name="nombre" id="nombre" [(ngModel)]="paciente.nombre" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                </div>
+                
+                <div class="md:col-span-2">
+                    <label for="apellido">Apellido: </label>
+                    <input type="text" name="apellido" id="apellido" [(ngModel)]="paciente.apellido" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                </div>
+
+                <div class="md:col-span-5">
+                    <label for="nombre">Lugar: </label>
+                    <input type="text" name="nombre" id="nombre" [(ngModel)]="paciente.nombre" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                </div>
+  
+                <div class="md:col-span-5">
+                  <label for="email">Email Address</label>
+                  <input type="text" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="email@domain.com" />
+                </div>
+  
+                <div class="md:col-span-3">
+                  <label for="address">Address / Street</label>
+                  <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+                </div>
+  
+                <div class="md:col-span-2">
+                  <label for="city">City</label>
+                  <input type="text" name="city" id="city" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+                </div>
+  
+                <div class="md:col-span-2">
+                  <label for="country">Country / region</label>
+                  <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
+                    <input name="country" id="country" placeholder="Country" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                    <button tabindex="-1" class="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
+                      <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </button>
+                    <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
+                      <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                    </button>
+                  </div>
+                </div>
+  
+                <div class="md:col-span-2">
+                  <label for="state">State / province</label>
+                  <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
+                    <input name="state" id="state" placeholder="State" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                    <button tabindex="-1" class="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
+                      <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </button>
+                    <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
+                      <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                    </button>
+                  </div>
+                </div>
+  
+                <div class="md:col-span-1">
+                  <label for="zipcode">Zipcode</label>
+                  <input type="text" name="zipcode" id="zipcode" class="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" value="" />
+                </div>
+  
+                <div class="md:col-span-5">
+                  <div class="inline-flex items-center">
+                    <input type="checkbox" name="billing_same" id="billing_same" class="form-checkbox" />
+                    <label for="billing_same" class="ml-2">My billing address is different than above.</label>
+                  </div>
+                </div>
+  
+                <div class="md:col-span-2">
+                  <label for="soda">How many soda pops?</label>
+                  <div class="h-10 w-28 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
+                    <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-r border-gray-200 transition-all text-gray-500 hover:text-blue-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mx-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <input name="soda" id="soda" placeholder="0" class="px-2 text-center appearance-none outline-none text-gray-800 w-full bg-transparent" value="0" />
+                    <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-500 hover:text-blue-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mx-2 fill-current" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+        
+                <div class="md:col-span-5 text-right">
+                  <div class="inline-flex items-end">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
